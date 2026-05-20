@@ -1,238 +1,327 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f7efe1" />
-  <title>Murus Mare — Mediterranean digital support for local businesses</title>
-  <meta name="description" content="Murus Mare brings international digital craft to local businesses: websites, landing pages, lead flows, automation, and monthly support with Mediterranean freshness." />
-  <meta property="og:title" content="Murus Mare — Mediterranean digital support" />
-  <meta property="og:description" content="International expertise for local businesses. Fresh websites, systems, and calm ongoing support." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://murusmare.com" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..800,35,1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --foam:#fbf6ea;
-      --paper:#f7efe1;
-      --sand:#ead9bc;
-      --salt:#fffaf0;
-      --ink:#13201f;
-      --muted:#665f52;
-      --sea:#006b68;
-      --deep:#063d49;
-      --blue:#1b8ea5;
-      --terracotta:#c7653e;
-      --coral:#e79c73;
-      --olive:#78885b;
-      --sun:#efc85a;
-      --line:rgba(19,32,31,.16);
-      --shadow:0 30px 90px rgba(41,50,42,.14);
-      --max:1180px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;background:var(--paper)}
-    body{
-      margin:0;
-      color:var(--ink);
-      font-family:Manrope,system-ui,-apple-system,Segoe UI,sans-serif;
-      background:
-        radial-gradient(circle at 7% 12%, rgba(231,156,115,.36), transparent 22%),
-        radial-gradient(circle at 92% 4%, rgba(27,142,165,.18), transparent 30%),
-        linear-gradient(180deg,var(--foam) 0%,var(--paper) 42%,#eadcc6 100%);
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-      overflow-x:hidden;
-    }
-    body:before{
-      content:""; position:fixed; inset:0; z-index:-2; pointer-events:none; opacity:.23;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='190' height='190' viewBox='0 0 190 190'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='190' height='190' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
-      mix-blend-mode:multiply;
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{width:min(var(--max),calc(100% - 44px));margin-inline:auto}
-    .nav{position:fixed;top:0;left:0;right:0;z-index:20;padding:18px 0;transition:.25s ease;background:linear-gradient(180deg,rgba(251,246,234,.86),rgba(251,246,234,.38) 72%,transparent);backdrop-filter:blur(10px)}
-    .nav-inner{display:flex;justify-content:space-between;align-items:center;gap:22px}
-    .brand{font-weight:900;letter-spacing:.09em;text-transform:uppercase;font-size:12px;display:flex;align-items:center;gap:10px}
-    .brand-mark{width:31px;height:31px;border:1.5px solid var(--ink);border-radius:999px;position:relative;background:rgba(255,250,240,.42)}
-    .brand-mark:before{content:"";position:absolute;inset:8px -7px 8px 8px;border:1.5px solid var(--sea);border-radius:999px;background:rgba(251,246,234,.5)}
-    .brand-mark:after{content:"";position:absolute;width:9px;height:9px;border-radius:999px;background:var(--terracotta);right:1px;top:3px}
-    .nav-links{display:flex;align-items:center;gap:18px;font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#2c352f}
-    .nav-links a{border-bottom:1px solid transparent;padding-bottom:4px}.nav-links a:hover{border-color:currentColor}
+<!DOCTYPE html>
 
-    .hero{min-height:100svh;display:grid;align-items:center;padding:112px 0 72px;position:relative}
-    .hero-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(330px,1.05fr);gap:48px;align-items:center}
-    .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.24em;color:var(--sea);font-weight:900;margin-bottom:24px}
-    h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0;text-wrap:balance}
-    h1{font-weight:430;font-size:clamp(66px,10.5vw,154px);line-height:.84;letter-spacing:-.058em;max-width:900px}
-    h1 span{display:block}.italic{font-style:italic;color:var(--terracotta);font-weight:360}.blue-word{color:var(--deep)}
-    .poem{margin-top:30px;max-width:520px;font-size:clamp(18px,2vw,24px);line-height:1.42;color:#49473f;text-wrap:pretty}
-    .actions{margin-top:34px;display:flex;gap:13px;flex-wrap:wrap}
-    .btn{min-height:49px;display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--ink);padding:0 18px;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;background:rgba(255,250,240,.52);transition:.22s ease;cursor:pointer;color:var(--ink)}
-    .btn:hover{transform:translateY(-1px);background:var(--ink);color:var(--foam)}
-    .btn.dark{background:var(--ink);color:var(--foam)}.btn.dark:hover{background:var(--sea);border-color:var(--sea)}
-
-    .art-stage{position:relative;height:min(72vh,680px);min-height:470px;isolation:isolate;filter:drop-shadow(0 32px 42px rgba(29,40,33,.12))}
-    .art-plate{position:absolute;inset:4% 4% 2% 1%;border:1px solid rgba(19,32,31,.14);background:linear-gradient(135deg,rgba(255,250,240,.64),rgba(234,217,188,.42));clip-path:polygon(4% 10%,80% 0,100% 35%,86% 100%,13% 90%,0 43%);backdrop-filter:blur(5px)}
-    .sun{position:absolute;right:7%;top:8%;width:clamp(125px,17vw,228px);aspect-ratio:1;border-radius:50%;background:var(--sun);box-shadow:0 0 0 1px rgba(19,32,31,.12);mix-blend-mode:multiply}
-    .sea-shape{position:absolute;left:6%;bottom:9%;width:73%;height:43%;background:var(--sea);clip-path:path("M 10 183 C 132 75 210 141 321 74 C 436 5 552 4 641 86 C 713 152 708 259 638 323 C 534 419 395 331 280 369 C 169 405 56 331 10 183 Z");opacity:.98}
-    .terra{position:absolute;right:2%;bottom:15%;width:47%;height:42%;background:var(--terracotta);clip-path:path("M 28 134 C 41 49 139 -8 238 20 C 339 49 391 149 342 232 C 292 317 163 329 82 276 C 28 240 15 197 28 134 Z");mix-blend-mode:multiply;opacity:.94}
-    .olive{position:absolute;left:16%;top:12%;width:43%;height:44%;background:var(--olive);clip-path:path("M 41 73 C 96 8 193 -10 265 33 C 350 84 359 190 292 257 C 221 328 105 306 48 229 C 12 179 6 115 41 73 Z");opacity:.34;mix-blend-mode:multiply}
-    .tile{position:absolute;right:25%;top:29%;width:180px;height:180px;background:rgba(255,250,240,.66);border:1px solid rgba(19,32,31,.16);transform:rotate(12deg);display:grid;grid-template-columns:repeat(2,1fr);padding:16px;gap:12px}
-    .tile i{display:block;border:1px solid rgba(6,61,73,.36);border-radius:50% 50% 4px 50%;transform:rotate(var(--r))}
-    .line-art{position:absolute;inset:0;z-index:5;opacity:.86}.caption{position:absolute;right:3%;bottom:4%;z-index:7;max-width:286px;font-size:11px;line-height:1.7;letter-spacing:.15em;text-transform:uppercase;color:#2c2c25;font-weight:900;background:rgba(255,250,240,.76);border:1px solid rgba(19,32,31,.15);padding:13px 15px;backdrop-filter:blur(8px)}
-
-    .marquee{border-block:1px solid var(--line);background:rgba(255,250,240,.45);overflow:hidden}.track{display:flex;justify-content:center}.track span{font-family:Fraunces,Georgia,serif;font-size:clamp(30px,4.8vw,68px);line-height:1.02;padding:22px 24px 27px;white-space:normal;text-align:center;letter-spacing:-.04em}.track span:not(:first-child){display:none}
-    .section{padding:106px 0}.section-head{display:grid;grid-template-columns:.82fr 1.18fr;gap:52px;align-items:end;margin-bottom:44px}.label{font-size:12px;text-transform:uppercase;letter-spacing:.24em;font-weight:900;color:var(--terracotta);margin-bottom:17px}h2{font-size:clamp(46px,6.8vw,104px);line-height:.87;letter-spacing:-.06em;font-weight:390}.intro{font-size:clamp(19px,2.2vw,29px);line-height:1.22;letter-spacing:-.035em;color:#3d433d;max-width:720px;text-wrap:pretty}
-    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.chip{border:1px solid var(--line);background:rgba(255,250,240,.56);border-radius:999px;padding:11px 14px;font-size:13px;font-weight:800;color:#4d5047}
-
-    .work-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}.work-card{min-height:280px;border:1px solid var(--line);background:rgba(255,250,240,.52);padding:24px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.work-card:before{content:"";position:absolute;inset:auto -35% -58% -35%;height:68%;background:var(--tone);border-radius:50%;opacity:.18}.work-card h3{font-size:clamp(31px,3.3vw,48px);font-weight:430;line-height:.94;letter-spacing:-.045em;position:relative}.work-card p{position:relative;color:#46483f;font-size:15px;line-height:1.65;margin:24px 0 0}.number{font-size:12px;font-weight:900;letter-spacing:.18em;color:var(--sea)}
-
-    .art-band{padding:20px 0 104px}.canvas-card{min-height:520px;border:1px solid var(--line);position:relative;overflow:hidden;background:#efe0c4;box-shadow:var(--shadow)}.canvas-card svg{position:absolute;inset:0;width:100%;height:100%}.canvas-card .overlay{position:absolute;left:26px;right:26px;bottom:26px;display:flex;justify-content:space-between;align-items:end;gap:28px;background:rgba(255,250,240,.84);border:1px solid rgba(19,32,31,.16);padding:24px;backdrop-filter:blur(9px)}.canvas-card h2{max-width:780px;font-size:clamp(42px,6.1vw,88px)}.note{max-width:340px;font-size:12px;line-height:1.75;text-transform:uppercase;letter-spacing:.13em;font-weight:900;color:#4d493e}
-
-    .pricing{padding:106px 0;background:linear-gradient(180deg,rgba(6,61,73,.06),rgba(199,101,62,.08))}.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.price-card{background:rgba(255,250,240,.68);border:1px solid var(--line);padding:24px;min-height:440px;display:flex;flex-direction:column;box-shadow:0 20px 52px rgba(41,50,42,.08)}.price-card.featured{background:var(--deep);color:var(--foam);transform:translateY(-14px)}.package-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.2em;font-weight:900;color:var(--terracotta)}.featured .package-kicker{color:var(--sun)}.price-card h3{font-size:clamp(34px,3.1vw,46px);line-height:.96;letter-spacing:-.045em;font-weight:430;margin-top:16px}.price{font-family:Fraunces,Georgia,serif;font-size:clamp(42px,4.6vw,64px);letter-spacing:-.06em;margin:23px 0 2px}.price span{font-family:Manrope,sans-serif;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}.featured .price span,.featured .muted{color:#f0e9dc}.featured li{color:#fff7e8}.muted{color:var(--muted);line-height:1.55;margin:0 0 20px}.price-card ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}.price-card li{color:#514d43;line-height:1.45;padding-left:22px;position:relative}.price-card.featured li{color:#fff7e8}.price-card li:before{content:"";position:absolute;left:0;top:.68em;width:9px;height:9px;border-radius:50%;background:var(--sea)}.featured li:before{background:var(--sun)}.price-card .btn{margin-top:auto;width:100%}.featured .btn{border-color:var(--foam);color:var(--ink);background:var(--foam)}.featured .btn:hover{background:var(--sun);border-color:var(--sun)}.pricing-note{margin-top:22px;color:#5d584d;font-size:13px;line-height:1.7;max-width:820px}
-
-    .contact{padding:98px 0 76px;background:var(--ink);color:var(--foam)}.contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:start}.contact h2{color:var(--salt)}.contact p{font-size:18px;line-height:1.7;color:#d0c7b7;max-width:500px;margin:26px 0 0}.contact .label{color:var(--sun)}form{display:grid;gap:14px;background:#1d2926;border:1px solid rgba(247,239,225,.22);padding:22px}label{display:grid;gap:8px;font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:#ded6c8;font-weight:900}input,select,textarea{width:100%;border:1px solid rgba(247,239,225,.58);background:#13201f;color:var(--foam);font:inherit;padding:15px 14px;outline:none;border-radius:0}::placeholder{color:#c3b9a8;opacity:1}textarea{min-height:142px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:var(--sun);box-shadow:0 0 0 3px rgba(239,200,90,.13)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.submit{width:max-content;padding-inline:22px;background:var(--foam);color:var(--ink);border-color:var(--foam)}.submit:hover{background:var(--sun);border-color:var(--sun);color:var(--ink)}.direct{font-size:13px;color:#cfc6b6}.direct a{border-bottom:1px solid currentColor}
-    footer{padding:24px 0;background:var(--ink);color:#a99f8f;border-top:1px solid rgba(247,239,225,.13);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-
-    @media(max-width:980px){.hero-grid,.section-head,.contact-grid{grid-template-columns:1fr}.work-grid,.pricing-grid{grid-template-columns:1fr}.price-card.featured{transform:none}.section{padding:78px 0}.art-stage{height:520px}.canvas-card .overlay{display:grid}.nav-links a:not(.nav-cta){display:none}}
-    @media(max-width:640px){.wrap{width:min(100% - 28px,var(--max))}.nav{padding:14px 0}.hero{padding-top:92px;min-height:auto}h1{font-size:clamp(62px,18vw,98px)}.art-stage{height:455px;min-height:390px}.tile{width:130px;height:130px;right:18%;top:31%;padding:12px}.caption{left:7px;right:auto;bottom:-8px}.canvas-card{min-height:560px}.canvas-card .overlay{left:16px;right:16px;bottom:16px;padding:18px}.form-row{grid-template-columns:1fr}.submit{width:100%}.work-card,.price-card{padding:20px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
-  </style>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Murus Mare — International digital craft for local businesses</title>
+<meta name="description" content="Murus Mare brings international digital craft to local businesses: websites, lead flows, automation, and calm monthly digital support." />
+<meta property="og:title" content="Murus Mare — International expertise for local businesses" />
+<meta property="og:description" content="Premium Mediterranean digital support: websites, lead flows, automation, and monthly care." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://murusmare.com" />
+<meta name="theme-color" content="#f9f9f9" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#6b5c4c",
+                        "on-secondary-container": "#716252",
+                        "on-secondary-fixed": "#241a0e",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#923b19",
+                        "surface-bright": "#f9f9f9",
+                        "primary-container": "#005f6b",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary-container": "#ffbca6",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#a7eefc",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#f4dfcb",
+                        "background": "#f9f9f9",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001f24",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "primary": "#00464f",
+                        "outline-variant": "#bec8ca",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#3f484a",
+                        "inverse-primary": "#8bd2df",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "on-tertiary-fixed-variant": "#7e2c0a",
+                        "on-secondary-fixed-variant": "#524436",
+                        "surface-tint": "#156874",
+                        "outline": "#6f797b",
+                        "secondary-fixed-dim": "#d7c3b0",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#732503",
+                        "surface-dim": "#dadada",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-container": "#90d6e4",
+                        "on-primary-fixed-variant": "#004e59",
+                        "secondary-fixed": "#f4dfcb",
+                        "on-tertiary-fixed": "#380d00",
+                        "inverse-surface": "#2f3131",
+                        "surface-container-low": "#f3f3f3",
+                        "on-surface": "#1a1c1c",
+                        "on-background": "#1a1c1c",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "primary-fixed-dim": "#8bd2df",
+                        "tertiary-fixed": "#ffdbcf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "max-width": "1440px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "24px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-xl": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "display-xl-mobile": ["Bodoni Moda"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.2em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "28px", "letterSpacing": "0.03em", "fontWeight": "400" }],
+                        "display-xl": ["80px", { "lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "400" }],
+                        "display-xl-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "letterSpacing": "0.05em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #f9f9f9; color: #1a1c1c; overflow-x: hidden; }
+        .grid-bg {
+            background-size: 24px 24px;
+            background-image:
+                linear-gradient(to right, rgba(217, 197, 178, 0.2) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(217, 197, 178, 0.2) 1px, transparent 1px);
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;
+        }
+        .reveal { opacity: 1; transform: none; transition: opacity .8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: none; }
+    </style>
 </head>
-<body>
-  <header class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="#top" aria-label="Murus Mare home"><span class="brand-mark"></span><span>Murus Mare</span></a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#work">Work</a>
-        <a href="#pricing">Pricing</a>
-        <a class="nav-cta" href="#contact">Begin</a>
-      </nav>
-    </div>
-  </header>
+<body class="antialiased relative selection:bg-primary selection:text-on-primary">
+<!-- stitch-main-murus-mare-v1: generated with Google Stitch MCP, adapted for murusmare.com -->
+<div class="grid-bg"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background dark:bg-surface border-b border-secondary-fixed-dim/20 transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-24 max-w-max-width mx-auto">
+<a class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight" href="#">Murus Mare</a>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-label-caps text-label-caps text-on-surface-variant opacity-70 hover:text-tertiary transition-colors duration-500" href="#services">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant opacity-70 hover:text-tertiary transition-colors duration-500" href="#packages">Packages</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant opacity-70 hover:text-tertiary transition-colors duration-500" href="#contact">Contact</a>
+</div>
+<a class="font-label-caps text-label-caps text-primary hover:text-tertiary transition-colors duration-500 hidden md:block" href="#contact">Inquire</a>
+<button class="md:hidden text-primary focus:outline-none">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</div>
+</nav>
+<main class="relative z-10 pt-32 md:pt-48 pb-32">
+<!-- Hero Section -->
+<section class="min-h-[819px] flex flex-col justify-center px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto relative reveal active">
+<div class="absolute right-0 top-0 w-1/2 h-full -z-10 opacity-30 mix-blend-multiply" style="background-image: radial-gradient(circle at 70% 30%, #8bd2df, transparent 60%);"></div>
+<div class="max-w-4xl">
+<p class="font-label-caps text-label-caps text-tertiary mb-8 tracking-widest uppercase">The Aesthetic of the Shoreline</p>
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary leading-tight mb-12">
+                    Where local business meets international craft.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-16">
+                    A hybrid of structural architecture and fluid Mediterranean calm. We craft digital artifacts for those who value intentionality over volume.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mt-16 md:mt-32">
+<div class="md:col-start-8 md:col-span-5 h-96 bg-surface-container-low border border-secondary-fixed-dim/30 relative overflow-hidden group">
+<img alt="Abstract architectural photography showing minimalist limestone walls against a deep sea teal sky. The composition is highly geometric and clean, evoking the Murus Mare brand aesthetic of Mediterranean minimalism and calm structure." class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 ease-in-out mix-blend-luminosity" data-alt="Abstract architectural photography showing minimalist limestone walls against a deep sea teal sky. The composition is highly geometric and clean, evoking the Murus Mare brand aesthetic of Mediterranean minimalism and calm structure. High contrast, sharp lines, bright light mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpfEYjC2jj-fPkKqVcOQHVjROZQbigAk4SYfnZFPWR45K2n2giWoyBltiAutzlQ4pGkpDc0OySFIz6lbTjcPcxCM6zvVLimUJf-6e_AmTMLyQlqcCaLBGcsZXNqNbMdDNzHTP-QtX8JBWSWlQWsZEKKseCmHYxB9Zq1EAYPwTYpyI-dkHBlSaxTKsCkopDkzyZlHxM6jB86xvUJpHl4SyyHW6zehHjuj_RwMND-MO0j-5y5CZ5XIK27BZZ1fGXz1CwFQs4goGb7tZr"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 md:py-48 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto border-t border-secondary-fixed-dim/20 reveal" id="services">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4 mb-16 md:mb-0">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Services</h2>
+<p class="font-label-caps text-label-caps text-tertiary mb-8">Less noise. More presence.</p>
+</div>
+<div class="md:col-start-6 md:col-span-7 space-y-24">
+<div class="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-tertiary">
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Websites</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                            Digital artifacts constructed with architectural precision. We build high-end platforms that serve as your serene headquarters on the web, rejecting template clutter for bespoke clarity.
+                        </p>
+</div>
+<div class="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-secondary-fixed-dim">
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Lead Flows &amp; Automation</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                            Invisible currents that guide your clientele. We design mathematical, low-friction systems that capture and nurture inquiries without aggressive tactics.
+                        </p>
+</div>
+<div class="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-secondary-fixed-dim">
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Monthly Digital Support</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                            Ongoing refinement. A calm, continuous relationship to ensure your digital presence remains pristine, performant, and aligned with your evolving narrative.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Packages Section -->
+<section class="py-32 md:py-48 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto border-t border-secondary-fixed-dim/20 reveal" id="packages">
+<div class="mb-24 md:w-1/2">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Packages</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Structured investments for sustained presence.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-x-gutter gap-y-16">
+<!-- Starter -->
+<div class="border-t border-secondary-fixed-dim/50 pt-8 flex flex-col h-full hover:border-primary transition-colors duration-500">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase">Starter</h3>
+<div class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg text-primary mb-8">
+                        85,000 <span class="font-body-md text-body-md align-top ml-1">DZD</span>
+</div>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-12 flex-grow">
+<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Minimalist digital canvas</li>
+<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Essential contact flow</li>
+<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Editorial typography hierarchy</li>
+</ul>
+</div>
+<!-- Growth -->
+<div class="border-t border-primary pt-8 flex flex-col h-full bg-surface-container-low -mx-margin-mobile px-margin-mobile md:mx-0 md:px-6 relative">
+<div class="absolute top-0 right-margin-mobile md:right-6 bg-primary text-on-primary font-label-caps text-[10px] px-3 py-1 -translate-y-1/2 rounded-none tracking-widest">Recommended</div>
+<h3 class="font-label-caps text-label-caps text-primary mb-2 uppercase">Growth</h3>
+<div class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg text-primary mb-8">
+                        180,000 <span class="font-body-md text-body-md align-top ml-1">DZD</span>
+</div>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-12 flex-grow">
+<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Multi-page immersive platform</li>
+<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Advanced automation sequences</li>
+<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Custom interaction design</li>
+<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Strategic content alignment</li>
+</ul>
+</div>
+<!-- Support -->
+<div class="border-t border-secondary-fixed-dim/50 pt-8 flex flex-col h-full hover:border-primary transition-colors duration-500">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase">Support</h3>
+<div class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg text-primary mb-8">
+                        30,000 <span class="font-body-md text-body-md align-top ml-1">DZD <span class="text-on-surface-variant/50 text-sm">/mo</span></span>
+</div>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-12 flex-grow">
+<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Technical maintenance</li>
+<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Performance optimization</li>
+<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Content updates</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 md:py-48 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto border-t border-secondary-fixed-dim/20 reveal" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-5 mb-16 md:mb-0">
+<h2 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary mb-6">Send a signal.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-sm">
+                        Initiate a conversation about architectural digital presence. 
+                    </p>
+<a class="inline-block mt-8 font-label-caps text-label-caps text-tertiary border-b border-tertiary pb-1 hover:text-primary hover:border-primary transition-colors duration-300" href="mailto:hello@murusmare.com">hello@murusmare.com</a>
+</div>
+<div class="md:col-start-7 md:col-span-6 bg-surface p-8 md:p-12 border border-secondary-fixed-dim/30 relative">
+<div class="absolute inset-0 bg-primary-fixed-dim/5 mix-blend-overlay pointer-events-none"></div>
+<form class="space-y-12 relative z-10" action="https://formsubmit.co/hello@murusmare.com" method="POST">
+<input type="hidden" name="_subject" value="Project with Murus Mare"/>
+<input type="hidden" name="_captcha" value="false"/>
+<input type="hidden" name="_template" value="box"/>
+<div class="relative group">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 transition-colors group-focus-within:text-primary">Name</label>
+<input class="w-full bg-transparent border-0 border-b border-secondary-fixed-dim/50 focus:ring-0 focus:border-primary py-2 px-0 font-body-md text-body-md text-on-surface transition-colors" name="name" autocomplete="name" placeholder="Your full name" required type="text"/>
+</div>
+<div class="relative group">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 transition-colors group-focus-within:text-primary">Email</label>
+<input class="w-full bg-transparent border-0 border-b border-secondary-fixed-dim/50 focus:ring-0 focus:border-primary py-2 px-0 font-body-md text-body-md text-on-surface transition-colors" name="email" autocomplete="email" placeholder="address@domain.com" required type="email"/>
+</div>
+<div class="relative group">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 transition-colors group-focus-within:text-primary">Inquiry</label>
+<textarea class="w-full bg-transparent border-0 border-b border-secondary-fixed-dim/50 focus:ring-0 focus:border-primary py-2 px-0 font-body-md text-body-md text-on-surface transition-colors resize-none" name="message" placeholder="How can we assist you?" required rows="3"></textarea>
+</div>
+<button class="bg-primary text-on-primary font-label-caps text-label-caps py-4 px-12 uppercase tracking-widest hover:bg-tertiary transition-colors duration-500 w-full md:w-auto mt-4 rounded-none" type="submit">
+                            Send to hello@murusmare.com
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-40 bg-surface-container dark:bg-surface-container-high border-t border-secondary-fixed-dim/20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="md:col-span-4 mb-16 md:mb-0">
+<a class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary dark:text-primary-fixed block mb-6" href="#">Murus Mare</a>
+<p class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant opacity-70">
+                    © <span id="year"></span> Murus Mare. Crafted with intention.
+                </p>
+</div>
+<div class="md:col-start-7 md:col-span-6 flex flex-col md:flex-row md:justify-end space-y-6 md:space-y-0 md:space-x-16">
+<div class="flex flex-col space-y-4">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline hover:text-tertiary dark:hover:text-tertiary-fixed-dim transition-opacity duration-300" href="mailto:hello@murusmare.com">hello@murusmare.com</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline hover:text-tertiary dark:hover:text-tertiary-fixed-dim transition-opacity duration-300" href="#services">Services</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline hover:text-tertiary dark:hover:text-tertiary-fixed-dim transition-opacity duration-300" href="#packages">Packages</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline hover:text-tertiary dark:hover:text-tertiary-fixed-dim transition-opacity duration-300" href="#contact">Contact</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Scroll Reveal Logic
+        document.addEventListener("DOMContentLoaded", () => {
+            const reveals = document.querySelectorAll(".reveal");
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                reveals.forEach((reveal) => {
+                    const revealTop = reveal.getBoundingClientRect().top;
+                    const revealPoint = 150;
+                    if (revealTop < windowHeight - revealPoint) {
+                        reveal.classList.add("active");
+                    }
+                });
+            };
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll(); // Trigger on load
 
-  <main id="top">
-    <section class="hero" aria-label="Murus Mare introduction">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">International expertise · Mediterranean freshness · local businesses</div>
-          <h1><span>Where the</span><span class="blue-word">sea breeze</span><span>meets the <em class="italic">screen</em>.</span></h1>
-          <p class="poem">Murus Mare builds calm, beautiful digital presence for businesses rooted in real streets, real clients, and real craft.</p>
-          <div class="actions">
-            <a class="btn dark" href="#pricing">View packages</a>
-            <a class="btn" href="mailto:hello@murusmare.com?subject=Project%20with%20Murus%20Mare">hello@murusmare.com</a>
-          </div>
-        </div>
-        <div class="art-stage" aria-label="Abstract Mediterranean artwork with sea, sun, olive, tile, and terracotta forms" role="img">
-          <div class="art-plate"></div><div class="sun"></div><div class="olive"></div><div class="sea-shape"></div><div class="terra"></div>
-          <div class="tile" aria-hidden="true"><i style="--r:25deg"></i><i style="--r:115deg"></i><i style="--r:-35deg"></i><i style="--r:205deg"></i></div>
-          <svg class="line-art" viewBox="0 0 760 760" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M72 520C162 464 226 514 320 448C433 368 433 280 544 238C613 212 665 239 715 281" stroke="#13201f" stroke-width="2" opacity=".56"/>
-            <path d="M58 572C168 511 250 590 370 510C480 436 480 350 589 318C648 302 698 330 733 366" stroke="#13201f" stroke-width="2" opacity=".36"/>
-            <path d="M142 134C208 100 284 112 338 160C394 210 400 286 360 344C312 414 213 425 151 368C84 307 70 174 142 134Z" stroke="#13201f" stroke-width="2" opacity=".55"/>
-            <path d="M514 620c42-30 92-31 140-4" stroke="#13201f" stroke-width="2" opacity=".5"/>
-            <circle cx="578" cy="158" r="67" stroke="#13201f" stroke-width="2" opacity=".36"/>
-          </svg>
-          <div class="caption">Salt · stone · signal · a page with light on it</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="marquee" aria-label="Brand line"><div class="track" aria-hidden="true"><span>Websites · lead flows · automation · monthly support</span><span>Websites · lead flows · automation · monthly support</span></div></section>
-
-    <section id="work" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <div><div class="label">What we make</div><h2>Less noise. More presence.</h2></div>
-          <div>
-            <p class="intro">For restaurants, clinics, studios, shops, and service businesses that need to look trustworthy online — without becoming a full-time tech department.</p>
-            <div class="chips" aria-label="Services"><span class="chip">Websites</span><span class="chip">Landing pages</span><span class="chip">Google-ready pages</span><span class="chip">Lead capture</span><span class="chip">Automation</span><span class="chip">Monthly care</span></div>
-          </div>
-        </div>
-        <div class="work-grid">
-          <article class="work-card" style="--tone:var(--sea)"><div class="number">01 · PRESENCE</div><div><h3>A site that feels alive.</h3><p>Fresh layout, sharp copy, fast loading, mobile-first structure, and a contact path that does not get lost.</p></div></article>
-          <article class="work-card" style="--tone:var(--terracotta)"><div class="number">02 · FLOW</div><div><h3>Leads handled with care.</h3><p>Forms, WhatsApp/email routing, simple automations, follow-up prompts, and clearer next steps for real customers.</p></div></article>
-          <article class="work-card" style="--tone:var(--sun)"><div class="number">03 · SUPPORT</div><div><h3>Someone keeps the lights on.</h3><p>Small improvements, content changes, fixes, measurement, and guidance after launch — the calm part most businesses miss.</p></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="art-band" aria-label="Mediterranean abstract artwork">
-      <div class="wrap canvas-card">
-        <svg viewBox="0 0 1400 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.055" numOctaves="2" seed="11"/><feDisplacementMap in="SourceGraphic" scale="20"/></filter><pattern id="tiles" width="90" height="90" patternUnits="userSpaceOnUse"><path d="M45 8c23 24 23 50 0 74C22 58 22 32 45 8Z" fill="none" stroke="#063d49" stroke-width="2" opacity=".23"/></pattern></defs>
-          <rect width="1400" height="600" fill="#efe0c4"/><rect width="1400" height="600" fill="url(#tiles)" opacity=".48"/>
-          <path d="M-80 418C126 288 270 378 445 260C645 125 722 42 940 96C1110 138 1198 292 1480 144V670H-80V418Z" fill="#006b68" filter="url(#rough)"/>
-          <path d="M-70 142C120 26 300 72 456 162C620 257 704 295 864 238C1032 179 1120 44 1470 94V-60H-70V142Z" fill="#c7653e" opacity=".88" filter="url(#rough)"/>
-          <circle cx="1048" cy="294" r="148" fill="#efc85a" opacity=".94"/>
-          <path d="M82 458C275 354 404 443 580 350C724 274 760 210 909 208C1055 206 1132 300 1324 232" stroke="#13201f" stroke-width="3" fill="none" opacity=".42"/>
-          <path d="M104 506C294 430 422 500 600 420C760 348 830 290 975 306C1125 323 1180 392 1326 338" stroke="#13201f" stroke-width="2" fill="none" opacity=".3"/>
-        </svg>
-        <div class="overlay"><h2>Built close to the street. Finished to travel.</h2><div class="note">Mediterranean clarity: sun, stone, water, rhythm — translated into digital support.</div></div>
-      </div>
-    </section>
-
-    <section id="pricing" class="pricing">
-      <div class="wrap">
-        <div class="section-head">
-          <div><div class="label">Pricing</div><h2>Packages without fog.</h2></div>
-          <p class="intro">Simple starting points. Each package is adjusted to the business, but the shape is clear before we begin.</p>
-        </div>
-        <div class="pricing-grid">
-          <article class="price-card">
-            <div class="package-kicker">Starter presence</div>
-            <h3>One-page website</h3>
-            <div class="price">85,000 DZD <span>from</span></div>
-            <p class="muted">For a business that needs a polished home online quickly.</p>
-            <ul><li>Art-directed one-page site</li><li>Mobile-first build</li><li>Copywriting in English or French</li><li>Contact form + email/WhatsApp path</li><li>Basic SEO and speed setup</li></ul>
-            <a class="btn" href="#contact">Ask for presence</a>
-          </article>
-          <article class="price-card featured">
-            <div class="package-kicker">Most useful</div>
-            <h3>Growth website + lead flow</h3>
-            <div class="price">180,000 DZD <span>from</span></div>
-            <p class="muted">For businesses that need better presentation and a cleaner way to receive prospects.</p>
-            <ul><li>Multi-section premium website</li><li>Service/package pages or sections</li><li>Lead capture flow</li><li>Google Maps / social proof integration</li><li>Launch support and handover</li></ul>
-            <a class="btn" href="#contact">Build the flow</a>
-          </article>
-          <article class="price-card">
-            <div class="package-kicker">Monthly harbor</div>
-            <h3>Ongoing digital support</h3>
-            <div class="price">30,000 DZD <span>per month from</span></div>
-            <p class="muted">For businesses that want someone watching, improving, and adjusting after launch.</p>
-            <ul><li>Small updates and fixes</li><li>Content and offer adjustments</li><li>Monthly performance notes</li><li>Automation improvements</li><li>Priority support channel</li></ul>
-            <a class="btn" href="#contact">Keep it alive</a>
-          </article>
-        </div>
-        <p class="pricing-note">Prices are starting points for local businesses. Larger apps, booking systems, multilingual content, custom dashboards, or paid ad funnels are quoted separately after a short discovery call.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="wrap contact-grid">
-        <div>
-          <div class="label">Contact</div>
-          <h2>Send a signal.</h2>
-          <p>Tell us what you run, where you are, and what needs to become clearer online. We answer from <a href="mailto:hello@murusmare.com">hello@murusmare.com</a>.</p>
-        </div>
-        <form action="https://formsubmit.co/hello@murusmare.com" method="POST">
-          <input type="hidden" name="_subject" value="Project with Murus Mare">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="box">
-          <div class="form-row"><label>Name<input name="name" autocomplete="name" required></label><label>Email<input name="email" type="email" autocomplete="email" required></label></div>
-          <div class="form-row"><label>Business / city<input name="business_city" placeholder="Name, place, or direction…"></label><label>Package<select name="package"><option>Not sure yet</option><option>Starter presence</option><option>Growth website + lead flow</option><option>Monthly digital support</option></select></label></div>
-          <label>Message<textarea name="message" required placeholder="What should your digital presence do better?"></textarea></label>
-          <button class="btn submit" type="submit">Send to hello@murusmare.com</button>
-          <div class="direct">Or write directly: <a href="mailto:hello@murusmare.com?subject=Project%20with%20Murus%20Mare">hello@murusmare.com</a></div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> Murus Mare</span><span>International expertise for local businesses</span></div></footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</body>
-</html>
+            // Navbar slight shrink on scroll
+            const navbar = document.getElementById("navbar");
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add("py-2");
+                    navbar.classList.remove("py-0");
+                    navbar.style.background = "rgba(249, 249, 249, 0.95)";
+                    navbar.style.backdropFilter = "blur(10px)";
+                } else {
+                    navbar.classList.remove("py-2");
+                    navbar.classList.add("py-0");
+                    navbar.style.background = "#f9f9f9";
+                    navbar.style.backdropFilter = "none";
+                }
+            });
+        });
+    document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+</body></html>
