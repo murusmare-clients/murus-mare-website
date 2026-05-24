@@ -1,771 +1,310 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Murus Mare | Website Care + Local Growth Support for small businesses</title>
-  <meta name="description" content="Murus Mare helps US small businesses keep their websites updated, trustworthy, and turning visitors into calls with $149/month website care plus local growth support.">
-  <meta property="og:title" content="Murus Mare | Website Care + Local Growth Support">
-  <meta property="og:description" content="Keep your website updated, trustworthy, and turning visitors into calls. $149/month care plus local SEO, landing pages, ads, automations, and analytics.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://murusmare.com">
-  <meta name="theme-color" content="#f7fbff">
-  <!-- coastline-blue-murus-mare-v1 -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Murus Mare | Website Care + Local Growth Support</title>
+  <meta name="description" content="A small web studio from the Mediterranean coast of Algeria. Website care and local growth support for small businesses — from $149/month." />
+  <meta property="og:title" content="Murus Mare | Website Care + Local Growth Support" />
+  <meta property="og:description" content="Keep your website updated, trustworthy, and turning visitors into calls. Website care from $149/month, plus local growth support." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://murusmare.com" />
+  <meta name="theme-color" content="#f2ede4" />
+  <!-- jijel-editorial-murus-mare-v1 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --ink: #08283a;
-      --muted: #476577;
-      --blue: #086fa6;
-      --blue-deep: #064f82;
-      --blue-soft: #dff4ff;
-      --sky: #bfe9ff;
-      --foam: #f7fbff;
-      --white-stone: #ffffff;
-      --limestone: #eef5f7;
-      --sand: #e9d8bc;
-      --sand-soft: #f6eddf;
-      --line: rgba(8, 40, 58, 0.14);
-      --shadow: 0 24px 80px rgba(6, 79, 130, 0.14);
-      --max: 1180px;
+      --paper: #F2EDE4;
+      --paper-soft: #FBF7EF;
+      --ink: #15171A;
+      --stone: #756F64;
+      --ochre: #B8642E;
+      --sea: #0D5D78;
+      --deep-sea: #073C52;
+      --foam: #E8F2F0;
+      --line: rgba(21, 23, 26, 0.13);
+      --line-strong: rgba(21, 23, 26, 0.24);
+      --display: "Fraunces", Georgia, serif;
+      --body: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      margin: 0;
-      overflow-x: hidden;
-      background: var(--foam);
+      background: var(--paper);
       color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.5;
-      text-rendering: optimizeLegibility;
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.65;
+      letter-spacing: -0.01em;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
-
+    ::selection { background: var(--ochre); color: var(--paper); }
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      z-index: -2;
-      background:
-        linear-gradient(180deg, rgba(191, 233, 255, 0.45), rgba(247, 251, 255, 0.78) 34%, rgba(255, 255, 255, 0.96)),
-        repeating-linear-gradient(90deg, rgba(8, 111, 166, 0.045) 0 1px, transparent 1px 96px);
+      pointer-events: none;
+      z-index: 100;
+      opacity: 0.045;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
     }
+    a { color: inherit; }
+    .page { max-width: 1440px; margin: 0 auto; padding: 0 64px; }
+    .grid-12 { display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px; }
 
-    img,
-    svg {
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .wrap {
-      width: min(var(--max), calc(100% - 40px));
-      margin-inline: auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(247, 251, 255, 0.86);
+    header {
+      position: sticky; top: 0; z-index: 50; padding: 26px 0;
+      background: rgba(242, 237, 228, 0.87);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(16px);
     }
+    .header-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+    .wordmark { font-family: var(--display); font-size: 22px; font-weight: 400; letter-spacing: -0.02em; line-height: 1; color: var(--ink); text-decoration: none; }
+    .wordmark-sub { display: block; font-family: var(--body); font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--stone); margin-top: 6px; }
+    .nav { display: flex; align-items: center; gap: 24px; font-size: 14px; color: var(--stone); }
+    .nav a { text-decoration: none; position: relative; }
+    .nav a:hover { color: var(--ink); }
+    .header-cta { color: var(--ink) !important; padding-bottom: 2px; border-bottom: 1px solid var(--ink); }
+    .hero-actions { grid-column: 4 / 12; margin-top: 34px; display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+    .primary-link { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 20px; background: var(--ink); color: var(--paper); text-decoration: none; font-weight: 500; }
+    .primary-link:hover { background: var(--ochre); }
+    .secondary-link { color: var(--stone); text-decoration: none; border-bottom: 1px solid var(--line-strong); padding-bottom: 2px; }
+    .secondary-link:hover { color: var(--ink); }
 
-    .nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
+    section { padding: 132px 0; border-top: 1px solid var(--line); position: relative; }
+    .section-marker { grid-column: 1 / 4; }
+    .section-number { font-family: var(--display); font-style: italic; font-weight: 300; font-size: clamp(56px, 8vw, 116px); line-height: .9; color: var(--ochre); letter-spacing: -0.04em; }
+    .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #5f584f; margin-top: 16px; display: block; }
+    .section-body { grid-column: 4 / 11; }
+
+    .hero { padding-top: 96px; padding-bottom: 132px; border-top: none; }
+    .hero-content { grid-column: 1 / 12; }
+    .hero h1 { font-family: var(--display); font-weight: 300; font-size: clamp(44px, 8.4vw, 136px); line-height: 0.98; letter-spacing: -0.04em; margin-bottom: 70px; max-width: 12ch; }
+    .hero h1 .line { display: block; opacity: 0; animation: fadeUp 820ms cubic-bezier(.2,.6,.2,1) forwards; }
+    .hero h1 .line:nth-child(2) { animation-delay: .12s; }
+    .hero h1 .line:nth-child(3) { animation-delay: .24s; }
+    .hero h1 .line:nth-child(4) { animation-delay: .36s; }
+    .italic { font-style: italic; }
+    .ochre { color: var(--ochre); font-style: italic; }
+    .hero-meta { grid-column: 4 / 12; display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; }
+    .hero-meta-block { border-top: 1px solid var(--line); padding-top: 16px; opacity: 0; animation: fadeUp 800ms cubic-bezier(.2,.6,.2,1) .55s forwards; }
+    .hero-meta-block:nth-child(2) { animation-delay: .65s; }
+    .hero-meta-block:nth-child(3) { animation-delay: .75s; }
+    .hero-meta-label, .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--stone); margin-bottom: 12px; }
+    .hero-meta-text { font-size: 16px; line-height: 1.6; max-width: 38ch; }
+    .hero-meta-text strong { color: var(--sea); font-weight: 600; }
+
+    .coastline { margin-top: 78px; grid-column: 1 / 13; min-height: 360px; position: relative; overflow: hidden; background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.38), transparent 28%),
+        linear-gradient(180deg, #9ec8cf 0%, #e9d9bb 42%, #b56a34 43%, #60351f 50%, #0b4e67 51%, #073c52 100%);
     }
-
-    .brand {
-      text-decoration: none;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.45rem, 3vw, 2rem);
-      letter-spacing: 0;
-      color: var(--blue-deep);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-    }
-
-    .nav-links a:hover {
-      color: var(--blue);
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 22px;
-      border: 1px solid var(--blue);
-      border-radius: 6px;
-      background: var(--blue);
-      color: white;
-      font-weight: 750;
-      text-decoration: none;
-      white-space: nowrap;
-      box-shadow: 0 12px 28px rgba(8, 111, 166, 0.18);
-      cursor: pointer;
-    }
-
-    .button:hover {
-      background: var(--blue-deep);
-      border-color: var(--blue-deep);
-    }
-
-    .button.secondary {
-      background: rgba(255, 255, 255, 0.78);
-      color: var(--blue-deep);
-      box-shadow: none;
-    }
-
-    .hero {
-      position: relative;
-      min-height: calc(100svh - 76px);
-      display: grid;
-      align-items: end;
-      padding: 78px 0 42px;
-      overflow: hidden;
-      isolation: isolate;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -2;
-      background:
-        linear-gradient(90deg, rgba(247, 251, 255, 0.96) 0%, rgba(247, 251, 255, 0.82) 44%, rgba(247, 251, 255, 0.1) 100%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0) 64%, var(--foam) 100%),
-        url("https://images.unsplash.com/photo-1757540458718-39b554788b44?auto=format&fit=crop&w=1800&q=80") center right / cover no-repeat;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      left: -6vw;
-      right: -6vw;
-      bottom: -72px;
-      z-index: -1;
-      height: 160px;
-      background:
-        radial-gradient(120% 90% at 50% 0%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 58%),
-        linear-gradient(180deg, rgba(8, 111, 166, 0.08), rgba(246, 237, 223, 0.9));
-      transform: rotate(-1.6deg);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.04fr) minmax(280px, 0.56fr);
-      gap: 42px;
-      align-items: end;
-    }
-
-    .eyebrow {
-      margin: 0 0 18px;
-      color: var(--blue);
-      font-size: 0.78rem;
-      font-weight: 850;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    h1,
-    h2,
-    h3,
-    p {
-      overflow-wrap: anywhere;
-    }
-
-    h1 {
-      max-width: 760px;
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(3rem, 8vw, 6.8rem);
-      line-height: 0.98;
-      letter-spacing: 0;
-      color: var(--ink);
-    }
-
-    .lead {
-      max-width: 650px;
-      margin: 28px 0 0;
-      color: #254f68;
-      font-size: clamp(1.08rem, 2.2vw, 1.38rem);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 34px;
-    }
-
-    .price-panel {
-      padding: 28px;
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.84);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(14px);
-    }
-
-    .price {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      margin: 8px 0 10px;
-      color: var(--blue-deep);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.8rem, 6vw, 4.2rem);
-      line-height: 1;
-    }
-
-    .price span {
-      color: var(--muted);
-      font-family: inherit;
-      font-size: 1rem;
-      font-weight: 700;
-    }
-
-    .mini-list {
-      display: grid;
-      gap: 10px;
-      margin: 22px 0 0;
-      padding: 0;
-      list-style: none;
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    .mini-list li {
-      display: flex;
-      gap: 10px;
-    }
-
-    .mini-list li::before {
-      content: "";
-      flex: 0 0 8px;
-      width: 8px;
-      height: 8px;
-      margin-top: 8px;
-      border-radius: 50%;
-      background: var(--blue);
-    }
-
-    section {
-      padding: 88px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
-      gap: 46px;
-      align-items: end;
-      margin-bottom: 42px;
-    }
-
-    h2 {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.1rem, 5vw, 4rem);
-      line-height: 1.05;
-      letter-spacing: 0;
-    }
-
-    .section-head p,
-    .section-note {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.08rem;
-      max-width: 680px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      min-width: 0;
-      padding: 26px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.76);
-    }
-
-    .card strong {
-      display: block;
-      margin-bottom: 10px;
-      color: var(--blue-deep);
-      font-size: 1.04rem;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .offer {
-      background:
-        linear-gradient(135deg, rgba(223, 244, 255, 0.96), rgba(255, 255, 255, 0.94) 48%, rgba(246, 237, 223, 0.68)),
-        var(--white-stone);
-    }
-
-    .offer-box {
-      display: grid;
-      grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
-      gap: 38px;
-      align-items: start;
-      padding: clamp(26px, 5vw, 48px);
-      border: 1px solid rgba(8, 111, 166, 0.18);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.82);
-      box-shadow: var(--shadow);
-    }
-
-    .offer-box h2 {
-      margin-bottom: 16px;
-    }
-
-    .included {
-      display: grid;
-      gap: 14px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .included li {
-      padding: 16px 0;
-      border-bottom: 1px solid var(--line);
-      color: var(--muted);
-    }
-
-    .included li:first-child {
-      padding-top: 0;
-    }
-
-    .included strong {
-      color: var(--ink);
-    }
-
-    .band {
-      background: linear-gradient(180deg, var(--blue-deep), #073a60);
-      color: white;
-    }
-
-    .band .eyebrow,
-    .band .section-head p,
-    .band .section-note {
-      color: rgba(255, 255, 255, 0.78);
-    }
-
-    .addons {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .addon {
-      min-width: 0;
-      padding: 22px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .addon strong {
-      display: block;
-      margin-bottom: 6px;
-      color: white;
-    }
-
-    .addon p {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.74);
-    }
-
-    .steps {
-      counter-reset: step;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .step {
-      position: relative;
-      min-width: 0;
-      padding: 26px;
-      border-top: 2px solid var(--blue);
-      background: rgba(255, 255, 255, 0.62);
-    }
-
-    .step::before {
-      counter-increment: step;
-      content: "0" counter(step);
-      display: block;
-      margin-bottom: 38px;
-      color: var(--blue);
-      font-weight: 850;
-    }
-
-    .step h3 {
-      margin: 0 0 8px;
-      font-size: 1.15rem;
-    }
-
-    .step p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .contact {
-      background:
-        linear-gradient(180deg, rgba(247, 251, 255, 0.96), rgba(255, 255, 255, 0.92)),
-        linear-gradient(90deg, transparent 0 68%, rgba(8, 111, 166, 0.08) 68% 100%);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 0.82fr) minmax(300px, 1fr);
-      gap: 54px;
-      align-items: start;
-    }
-
-    .contact a {
-      color: var(--blue-deep);
-      font-weight: 750;
-    }
-
-    form {
-      display: grid;
-      gap: 16px;
-      padding: clamp(22px, 4vw, 36px);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: white;
-      box-shadow: var(--shadow);
-    }
-
-    label {
-      display: grid;
-      gap: 8px;
-      color: var(--ink);
-      font-size: 0.92rem;
-      font-weight: 750;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      min-width: 0;
-      border: 1px solid rgba(8, 40, 58, 0.2);
-      border-radius: 6px;
-      background: var(--foam);
-      color: var(--ink);
-      font: inherit;
-      padding: 13px 14px;
-    }
-
-    textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-
-    input:focus,
-    textarea:focus {
-      outline: 3px solid rgba(8, 111, 166, 0.18);
-      border-color: var(--blue);
-      background: white;
-    }
-
-    .site-footer {
-      padding: 34px 0;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      background: var(--white-stone);
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 860px) {
-      .nav {
-        min-height: auto;
-        padding: 18px 0;
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        width: 100%;
-        gap: 14px;
-        flex-wrap: wrap;
-      }
-
-      .nav-links .button {
-        width: 100%;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 54px 0 34px;
-      }
-
-      .hero::before {
-        background:
-          linear-gradient(180deg, rgba(247, 251, 255, 0.94) 0%, rgba(247, 251, 255, 0.86) 54%, rgba(247, 251, 255, 0.98) 100%),
-          url("https://images.unsplash.com/photo-1757540458718-39b554788b44?auto=format&fit=crop&w=1200&q=80") center / cover no-repeat;
-      }
-
-      .hero-grid,
-      .section-head,
-      .offer-box,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cards,
-      .steps,
-      .addons {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 66px 0;
-      }
-
-      .price-panel {
-        padding: 22px;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .wrap {
-        width: min(100% - 28px, var(--max));
-      }
-
-      .nav-links a:not(.button) {
-        font-size: 0.88rem;
-      }
-
-      .hero-actions .button {
-        width: 100%;
-      }
-
-      .card,
-      .step,
-      .addon {
-        padding: 20px;
-      }
-    }
+    .coastline::before { content:""; position:absolute; inset:auto -8% -18% -8%; height: 58%; background: radial-gradient(70% 80% at 50% 0%, rgba(232,242,240,.95), rgba(232,242,240,.4) 36%, transparent 37%), repeating-linear-gradient(172deg, rgba(255,255,255,.18) 0 2px, transparent 2px 28px); border-radius: 50% 50% 0 0; transform: rotate(-2deg); }
+    .coastline::after { content:"Murus Mare"; position:absolute; right: clamp(20px, 5vw, 70px); bottom: 34px; font-family: var(--display); font-style: italic; font-size: clamp(34px, 7vw, 92px); color: rgba(242,237,228,.55); letter-spacing: -0.04em; }
+    .painting-caption { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--stone); margin-top: 14px; grid-column: 1 / 13; }
+
+    .prose p { font-size: 18px; line-height: 1.72; margin-bottom: 22px; max-width: 60ch; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { font-weight: 600; }
+    .prose em { font-family: var(--display); font-style: italic; font-weight: 400; color: var(--ochre); }
+    .prose-lead { font-family: var(--display); font-weight: 300; font-size: clamp(28px, 3.25vw, 44px); line-height: 1.17; letter-spacing: -0.025em; margin-bottom: 46px; max-width: 24ch; }
+
+    .included { list-style: none; margin-top: 48px; }
+    .included li { display: grid; grid-template-columns: 64px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+    .included li:first-child { border-top: 1px solid var(--line); }
+    .included-marker { font-family: var(--display); font-style: italic; font-size: 20px; color: var(--ochre); }
+    .included-content h4 { font-family: var(--display); font-weight: 400; font-size: 23px; letter-spacing: -0.015em; margin-bottom: 6px; }
+    .included-content p { font-size: 15px; color: var(--stone); line-height: 1.6; max-width: 58ch; }
+
+    .approach { display: grid; grid-template-columns: repeat(2, 1fr); gap: 56px 64px; margin-top: 48px; }
+    .approach-item { border-top: 1px solid var(--line); padding-top: 18px; }
+    .approach-num { font-family: var(--display); font-style: italic; font-size: 14px; color: var(--ochre); margin-bottom: 10px; }
+    .approach-item h4 { font-family: var(--display); font-weight: 400; font-size: 24px; letter-spacing: -0.015em; margin-bottom: 10px; }
+    .approach-item p { font-size: 15px; color: var(--stone); line-height: 1.6; max-width: 44ch; }
+
+    .quote { font-family: var(--display); font-weight: 300; font-style: italic; font-size: clamp(24px, 3vw, 38px); line-height: 1.28; letter-spacing: -0.02em; max-width: 28ch; padding-left: 32px; position: relative; }
+    .quote::before { content:"—"; position:absolute; left:0; color: var(--ochre); font-style: normal; }
+    .quote-attr { margin-top: 26px; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--stone); padding-left: 32px; }
+
+    .contact-panel { grid-column: 1 / 13; display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start; padding: 60px; background: var(--paper-soft); border: 1px solid var(--line); }
+    .contact-panel h2 { font-family: var(--display); font-weight: 300; font-size: clamp(38px, 6vw, 92px); line-height: .98; letter-spacing: -0.04em; max-width: 10ch; }
+    .contact-panel h2 em { color: var(--ochre); font-style: italic; }
+    .contact-note { margin-top: 28px; color: var(--stone); max-width: 40ch; }
+    form { display: grid; gap: 14px; }
+    label { font-size: 11px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--stone); }
+    input, textarea { width: 100%; border: 1px solid var(--line-strong); background: var(--paper); color: var(--ink); font: inherit; padding: 15px 16px; border-radius: 0; outline: none; }
+    textarea { min-height: 160px; resize: vertical; }
+    input:focus, textarea:focus { border-color: var(--ochre); }
+    .submit { border: 0; background: var(--ink); color: var(--paper); font: 500 15px var(--body); padding: 17px 20px; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+    .submit:hover { background: var(--ochre); transform: translateY(-1px); }
+    .direct-email { display: inline-block; margin-top: 18px; color: var(--stone); font-size: 14px; }
+
+    footer { border-top: 1px solid var(--line); padding: 48px 0 56px; font-size: 13px; color: var(--stone); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 24px; }
+    .footer-wordmark { font-family: var(--display); font-size: 16px; color: var(--ink); }
+    .footer-meta { display: flex; gap: 28px; flex-wrap: wrap; }
+    .footer-meta a { color: var(--stone); text-decoration: none; }
+    .footer-meta a:hover { color: var(--ink); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 980px) { .section-marker, .section-body, .hero-content, .hero-meta, .contact-panel { grid-column: 1 / 13; } .hero-meta, .contact-panel { grid-template-columns: 1fr; } .section-marker { margin-bottom: 28px; } }
+    @media (max-width: 768px) { .page { padding: 0 24px; } .grid-12 { gap: 16px; } header { padding: 20px 0; } .nav a:not(.header-cta) { display: none; } section { padding: 84px 0; } .hero { padding-top: 62px; padding-bottom: 96px; } .hero h1 { margin-bottom: 48px; } .hero-meta { grid-template-columns: 1fr; gap: 28px; } .coastline { min-height: 260px; margin-top: 54px; } .included li { grid-template-columns: 42px 1fr; gap: 16px; } .approach { grid-template-columns: 1fr; gap: 38px; } .contact-panel { padding: 30px 24px; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="wrap nav" aria-label="Main navigation">
-      <a class="brand" href="#">Murus Mare</a>
-      <div class="nav-links">
-        <a href="#care">Care Plan</a>
-        <a href="#growth">Local Growth</a>
-        <a href="#process">Process</a>
-        <a class="button" href="#contact">Get Help</a>
+  <header>
+    <div class="page">
+      <div class="header-inner">
+        <a href="/" class="wordmark">Murus Mare <span class="wordmark-sub">Jijel · Algeria</span></a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#included">Care plan</a>
+          <a href="#growth">Local growth</a>
+          <a href="#contact" class="header-cta">Request a review →</a>
+        </nav>
       </div>
-    </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow">Website Care + Local Growth Support</p>
-          <h1>Keep your website turning visitors into calls.</h1>
-          <p class="lead">For busy small-business owners with a website that exists, but is outdated, unclear, or not converting enough customers. We keep it updated, trustworthy, and easier to find — starting at $149/month.</p>
+      <div class="page">
+        <div class="grid-12">
+          <div class="hero-content">
+            <h1>
+              <span class="line">A web studio</span>
+              <span class="line italic">that stays</span>
+              <span class="line">on the <span class="ochre">other end</span></span>
+              <span class="line italic">of the line.</span>
+            </h1>
+          </div>
+          <div class="hero-meta">
+            <div class="hero-meta-block">
+              <div class="hero-meta-label">Website Care + Local Growth Support</div>
+              <p class="hero-meta-text">For small businesses with a website that exists, but is outdated, unclear, or not turning enough visitors into calls.</p>
+            </div>
+            <div class="hero-meta-block">
+              <div class="hero-meta-label">From $149/month</div>
+              <p class="hero-meta-text">Updates, support, hosting help, domain/email help, one monthly SEO content piece, and small conversion fixes.</p>
+            </div>
+            <div class="hero-meta-block">
+              <div class="hero-meta-label">Built from Jijel</div>
+              <p class="hero-meta-text">A small Mediterranean studio bringing international web standards to local businesses that need fewer headaches and more inquiries.</p>
+            </div>
+          </div>
           <div class="hero-actions">
-            <a class="button" href="#contact">Get a website care review</a>
-            <a class="button secondary" href="mailto:hello@murusmare.com">Email hello@murusmare.com</a>
+            <a class="primary-link" href="#contact">Request a website care review</a>
+            <a class="secondary-link" href="#included">See what $149/month includes</a>
+          </div>
+          <div class="coastline" role="img" aria-label="Abstract Mediterranean coastline illustration with sea, sand, and old stone wall tones"></div>
+          <div class="painting-caption">Murus Mare · a web studio from the Mediterranean coast of Algeria</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="page">
+        <div class="grid-12">
+          <div class="section-marker"><div class="section-number">01</div><span class="section-label">About</span></div>
+          <div class="section-body prose">
+            <p class="prose-lead">A website is something <em>like a wall.</em> It stands between your business and the world, and it has to hold.</p>
+            <p>The name comes from a 12th-century Arab chronicler describing Jijel: an ancient city on the sea, with an old wall that extends into the water. Phoenicians built it. Romans reinforced it. Byzantines held it. The Ottomans took it. Two thousand years of salt have weathered the rest.</p>
+            <p>Most of it is still there.</p>
+            <p>Small business owners should not have to think about their website every week. They should be serving customers, quoting jobs, booking appointments, and running the place. The site can be a quiet thing in the background that stays updated, stays trustworthy, and makes it easier for people to contact you.</p>
+            <p>That is the work we like doing.</p>
           </div>
         </div>
-        <aside class="price-panel" aria-label="$149 monthly website care plan">
-          <p class="eyebrow">Core offer</p>
-          <div class="price">$149 <span>/ month</span></div>
-          <p>Monthly website care for owners who want fewer tech headaches and more visitors becoming calls, quote requests, and booked work.</p>
-          <ul class="mini-list">
-            <li>Small fixes and updates</li>
-            <li>Hosting, domain, and email help</li>
-            <li>One monthly SEO content piece</li>
-          </ul>
-        </aside>
       </div>
     </section>
 
-    <section>
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">For websites that need to work harder</p>
-            <h2>A website is not “done” if it is not helping customers contact you.</h2>
+    <section id="included">
+      <div class="page">
+        <div class="grid-12">
+          <div class="section-marker"><div class="section-number">02</div><span class="section-label">Care plan</span></div>
+          <div class="section-body">
+            <p class="prose-lead"><em>$149/month</em> website care to keep your site updated, trustworthy, and useful.</p>
+            <ul class="included">
+              <li><span class="included-marker">i.</span><div class="included-content"><h4>Website support and maintenance</h4><p>Small updates, fixes, content edits, and regular checks so the site does not quietly rot after launch.</p></div></li>
+              <li><span class="included-marker">ii.</span><div class="included-content"><h4>Hosting help</h4><p>We keep the boring technical parts watched, tidy, and understandable. You should not need to learn what broke at midnight.</p></div></li>
+              <li><span class="included-marker">iii.</span><div class="included-content"><h4>Domain and email help</h4><p>Setup and renewal guidance for the pieces customers actually see: your domain, business email, redirects, and basic DNS.</p></div></li>
+              <li><span class="included-marker">iv.</span><div class="included-content"><h4>One monthly SEO content piece</h4><p>Useful local content written for people and search engines — not filler, not AI sludge, not a blog graveyard.</p></div></li>
+              <li><span class="included-marker">v.</span><div class="included-content"><h4>Small fixes and conversion checks</h4><p>We look for the obvious leaks: weak service pages, hidden contact buttons, confusing copy, broken forms, and mobile friction.</p></div></li>
+              <li><span class="included-marker">vi.</span><div class="included-content"><h4>Human support</h4><p>A short client list, kept short on purpose. Response time measured in hours rather than weeks.</p></div></li>
+            </ul>
           </div>
-          <p>Many small businesses already have a website. The problem is that it gets neglected: old copy, weak service pages, confusing contact paths, no fresh content, and no clear link between Google traffic and real inquiries.</p>
-        </div>
-        <div class="cards">
-          <article class="card">
-            <strong>For businesses with neglected websites</strong>
-            <p>Contractors, clinics, salons, movers, repair shops, local providers, and professional firms where one good inquiry can pay for months of support.</p>
-          </article>
-          <article class="card">
-            <strong>For owners tired of chasing freelancers</strong>
-            <p>Send the issue, update, or idea. We handle the web work, explain the tradeoffs clearly, and keep the site moving instead of gathering dust.</p>
-          </article>
-          <article class="card">
-            <strong>For steady, local growth</strong>
-            <p>Care keeps the foundation healthy. Local SEO, Google Business Profile work, landing pages, tracking, and follow-up systems help turn attention into leads.</p>
-          </article>
         </div>
       </div>
     </section>
 
-    <section class="offer" id="care">
-      <div class="wrap offer-box">
-        <div>
-          <p class="eyebrow">Website Care + Local Growth entry plan</p>
-          <h2>$149/month to keep your website updated, trustworthy, and useful.</h2>
-          <p class="section-note">A practical care plan for US small businesses that already have a site, but need someone to keep it accurate, fix issues, improve conversion paths, and publish useful local content.</p>
-        </div>
-        <ul class="included">
-          <li><strong>Website support and maintenance.</strong> Updates, broken links, forms, page edits, plugin or platform issues, and routine improvements.</li>
-          <li><strong>Hosting help.</strong> Guidance with hosting accounts, DNS records, SSL, backups, migrations, and basic performance concerns.</li>
-          <li><strong>Domain and email help.</strong> Support with domain settings, business email setup, forwarding, authentication records, and related account issues.</li>
-          <li><strong>One monthly SEO content piece.</strong> A practical article, service-page update, or location-focused content piece aimed at the searches your customers make.</li>
-          <li><strong>Small fixes and conversion checks.</strong> Minor copy, layout, image, form, CTA, and technical fixes that keep the site accurate, usable, and easier for customers to contact you.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="band" id="growth">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Local growth add-ons</p>
-            <h2>When the site is stable, add work that brings better leads.</h2>
+    <section id="growth">
+      <div class="page">
+        <div class="grid-12">
+          <div class="section-marker"><div class="section-number">03</div><span class="section-label">Local growth</span></div>
+          <div class="section-body">
+            <p class="prose-lead">Once the site holds, we make it <em>work harder.</em></p>
+            <div class="prose">
+              <p>A website is not “done” if it is not helping customers contact you. Many small-business sites technically exist, but the copy is old, the services are unclear, the contact path is weak, and Google traffic leaks away without becoming calls, quote requests, or bookings.</p>
+              <p>After the basics are stable, Murus Mare can help with local SEO, Google Business Profile work, landing pages, ads and lead generation, automations, analytics, and custom growth builds.</p>
+            </div>
+            <div class="approach">
+              <div class="approach-item"><div class="approach-num">i.</div><h4>Care over scale</h4><p>We would rather keep a smaller client list than become another studio that forgets your name three months in.</p></div>
+              <div class="approach-item"><div class="approach-num">ii.</div><h4>International craft</h4><p>Modern hosting standards, accessibility basics, clear structure, and careful copy — pointed at local businesses, not only big brands.</p></div>
+              <div class="approach-item"><div class="approach-num">iii.</div><h4>One bill, no theater</h4><p>Simple monthly care first. Clear add-ons only when they make sense. No vague retainer theater.</p></div>
+              <div class="approach-item"><div class="approach-num">iv.</div><h4>Built for real inquiries</h4><p>The goal is practical: fewer website headaches, fewer missed opportunities, and more visitors becoming real conversations.</p></div>
+            </div>
           </div>
-          <p>Start with the care plan. Add focused growth work when there is a clear business reason: more local visibility, better landing pages, cleaner tracking, or stronger follow-up.</p>
-        </div>
-        <div class="addons">
-          <article class="addon">
-            <strong>Local SEO and Google Business Profile</strong>
-            <p>Improve local search visibility, service categories, location signals, and the information customers see before they click.</p>
-          </article>
-          <article class="addon">
-            <strong>Ads and lead generation</strong>
-            <p>Campaign setup, landing-page alignment, tracking, and practical improvements focused on qualified calls, quote requests, and bookings.</p>
-          </article>
-          <article class="addon">
-            <strong>Landing pages</strong>
-            <p>Dedicated pages for services, offers, locations, seasonal campaigns, or paid traffic.</p>
-          </article>
-          <article class="addon">
-            <strong>Automations and analytics</strong>
-            <p>Lead routing, simple follow-up flows, conversion tracking, reporting dashboards, and measurement cleanup so fewer inquiries disappear.</p>
-          </article>
-          <article class="addon">
-            <strong>Custom builds</strong>
-            <p>New websites, redesigns, custom integrations, and operational tools scoped around business outcomes.</p>
-          </article>
-          <article class="addon">
-            <strong>Content expansion</strong>
-            <p>Additional SEO articles, service pages, local pages, offer pages, and copy improvements beyond the care plan.</p>
-          </article>
         </div>
       </div>
     </section>
 
-    <section id="process">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">How it works</p>
-            <h2>Start with the obvious leaks, then improve monthly.</h2>
+    <section id="studio">
+      <div class="page">
+        <div class="grid-12">
+          <div class="section-marker"><div class="section-number">04</div><span class="section-label">Studio</span></div>
+          <div class="section-body">
+            <p class="quote">Built from inside the web industry — for small businesses outside it.</p>
+            <p class="quote-attr">Murus Mare · Website Care + Local Growth Support</p>
+            <div class="prose" style="margin-top: 46px;">
+              <p>We have worked across international hosting, product, and customer support long enough to know how good a small site can be when nobody is cutting corners.</p>
+              <p>The studio brings that standard back to where it is most useful: businesses that need the quality a large agency sells, without the silence, handoffs, surprise invoices, or eight-page contract.</p>
+            </div>
           </div>
-          <p>No vague retainer theater. We identify what is hurting trust or inquiries first, handle the monthly care work, and recommend growth projects only when they fit the business.</p>
-        </div>
-        <div class="steps">
-          <article class="step">
-            <h3>Send your website and the problem</h3>
-            <p>Tell us what feels outdated, broken, unclear, hard to edit, or not bringing enough inquiries.</p>
-          </article>
-          <article class="step">
-            <h3>Get a practical recommendation</h3>
-            <p>We separate small care-plan fixes from larger growth work like local SEO, landing pages, ads, automations, or redesigns.</p>
-          </article>
-          <article class="step">
-            <h3>Keep improving every month</h3>
-            <p>The site stays maintained while content, SEO, contact paths, tracking, and bigger improvements are planned around business priorities.</p>
-          </article>
         </div>
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="wrap contact-grid">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Want your website to bring more real inquiries?</h2>
-          <p class="section-note">Use the form or email <a href="mailto:hello@murusmare.com">hello@murusmare.com</a>. Include your website URL and what you want more of: calls, quote requests, bookings, local visibility, or simply fewer website headaches.</p>
+    <section id="contact">
+      <div class="page">
+        <div class="grid-12">
+          <div class="contact-panel">
+            <div>
+              <div class="eyebrow">Request a website care review</div>
+              <h2>Tell us what should <em>work better.</em></h2>
+              <p class="contact-note">Send your website and what you want more of: calls, quote requests, bookings, local visibility, fixes, content, or less technical stress.</p>
+              <a class="direct-email" href="mailto:hello@murusmare.com">hello@murusmare.com</a>
+            </div>
+            <form action="https://formsubmit.co/hello@murusmare.com" method="POST">
+              <input type="hidden" name="_subject" value="New Murus Mare website care review request" />
+              <input type="hidden" name="_captcha" value="false" />
+              <div><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
+              <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+              <div><label for="message">Website / goals</label><textarea id="message" name="message" placeholder="Share your website URL and what you want more of: calls, quotes, bookings, SEO, fixes, support…" required></textarea></div>
+              <button class="submit" type="submit">Request a website care review</button>
+            </form>
+          </div>
         </div>
-        <form action="https://formsubmit.co/hello@murusmare.com" method="POST">
-          <input type="hidden" name="_subject" value="New Murus Mare website inquiry">
-          <input type="hidden" name="_captcha" value="false">
-          <label>
-            Name
-            <input type="text" name="name" autocomplete="name" required>
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-          <label>
-            Message
-            <textarea name="message" required placeholder="Share your website URL and what you want improved: calls, quotes, bookings, SEO, fixes, or support."></textarea>
-          </label>
-          <button class="button" type="submit">Request a website care review</button>
-        </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <span>Murus Mare</span>
-      <span>Website Care + Local Growth Support | <a href="mailto:hello@murusmare.com">hello@murusmare.com</a></span>
+  <footer>
+    <div class="page footer-inner">
+      <div><span class="footer-wordmark">Murus Mare</span> · Website Care + Local Growth Support</div>
+      <div class="footer-meta"><span>Jijel · Algeria</span><a href="mailto:hello@murusmare.com">hello@murusmare.com</a><a href="#contact">Request a review</a></div>
     </div>
   </footer>
 </body>
