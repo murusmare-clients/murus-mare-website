@@ -2,4 +2,22 @@
 
 Static landing page for https://murusmare.com.
 
-Design direction: Stitch/Awwwards-inspired Mediterranean editorial site with abstract coastal art, fresh sea/sun/stone palette, English positioning for US small businesses, visible $149/month care package, growth upsells, and contact form to hello@murusmare.com.
+## Positioning
+
+Murus Mare offers website care for US small businesses. The core plan is $149/month and includes:
+
+- Website support and maintenance
+- Hosting help
+- Domain and email help
+- One monthly SEO content piece
+- Small website fixes
+
+Growth add-ons include local SEO and Google Business Profile work, ads and lead generation, landing pages, automations, analytics, and custom builds.
+
+## Design direction
+
+The page uses a bright Jijel/Algerian coastline-inspired palette: white limestone, Mediterranean sea blue, sky blue, foam, and subtle sand. The copy is direct and conversion-oriented while keeping a premium clean editorial feel.
+
+## Runtime
+
+This is a standalone static HTML page served by the included Dockerfile through nginx. No build step is required.

@@ -1,327 +1,772 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Murus Mare | $149/month website care for US small businesses</title>
+  <meta name="description" content="Murus Mare provides $149/month website care for US small businesses: support, maintenance, hosting help, domain/email help, one monthly SEO content piece, and small fixes.">
+  <meta property="og:title" content="Murus Mare | Website care for US small businesses">
+  <meta property="og:description" content="$149/month website support, maintenance, hosting help, domain/email help, monthly SEO content, and small fixes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://murusmare.com">
+  <meta name="theme-color" content="#f7fbff">
+  <!-- coastline-blue-murus-mare-v1 -->
+  <style>
+    :root {
+      --ink: #08283a;
+      --muted: #476577;
+      --blue: #086fa6;
+      --blue-deep: #064f82;
+      --blue-soft: #dff4ff;
+      --sky: #bfe9ff;
+      --foam: #f7fbff;
+      --white-stone: #ffffff;
+      --limestone: #eef5f7;
+      --sand: #e9d8bc;
+      --sand-soft: #f6eddf;
+      --line: rgba(8, 40, 58, 0.14);
+      --shadow: 0 24px 80px rgba(6, 79, 130, 0.14);
+      --max: 1180px;
+    }
 
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Murus Mare — $149/month website support for US small businesses</title>
-<meta name="description" content="Murus Mare supports US small businesses with website care, hosting, domain/email help, monthly SEO content, lead generation, ads, and automation." />
-<meta property="og:title" content="Murus Mare — Website support for US small businesses" />
-<meta property="og:description" content="$149/month website support, hosting, domain/email help, monthly SEO content, plus growth services." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://murusmare.com" />
-<meta name="theme-color" content="#f9f9f9" />
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "secondary": "#6b5c4c",
-                        "on-secondary-container": "#716252",
-                        "on-secondary-fixed": "#241a0e",
-                        "on-error": "#ffffff",
-                        "error-container": "#ffdad6",
-                        "tertiary-container": "#923b19",
-                        "surface-bright": "#f9f9f9",
-                        "primary-container": "#005f6b",
-                        "surface-container-high": "#e8e8e8",
-                        "on-tertiary-container": "#ffbca6",
-                        "on-tertiary": "#ffffff",
-                        "primary-fixed": "#a7eefc",
-                        "on-primary": "#ffffff",
-                        "secondary-container": "#f4dfcb",
-                        "background": "#f9f9f9",
-                        "error": "#ba1a1a",
-                        "on-primary-fixed": "#001f24",
-                        "tertiary-fixed-dim": "#ffb59b",
-                        "primary": "#00464f",
-                        "outline-variant": "#bec8ca",
-                        "on-error-container": "#93000a",
-                        "on-surface-variant": "#3f484a",
-                        "inverse-primary": "#8bd2df",
-                        "surface-container-lowest": "#ffffff",
-                        "surface": "#f9f9f9",
-                        "on-tertiary-fixed-variant": "#7e2c0a",
-                        "on-secondary-fixed-variant": "#524436",
-                        "surface-tint": "#156874",
-                        "outline": "#6f797b",
-                        "secondary-fixed-dim": "#d7c3b0",
-                        "on-secondary": "#ffffff",
-                        "tertiary": "#732503",
-                        "surface-dim": "#dadada",
-                        "inverse-on-surface": "#f1f1f1",
-                        "surface-variant": "#e2e2e2",
-                        "on-primary-container": "#90d6e4",
-                        "on-primary-fixed-variant": "#004e59",
-                        "secondary-fixed": "#f4dfcb",
-                        "on-tertiary-fixed": "#380d00",
-                        "inverse-surface": "#2f3131",
-                        "surface-container-low": "#f3f3f3",
-                        "on-surface": "#1a1c1c",
-                        "on-background": "#1a1c1c",
-                        "surface-container-highest": "#e2e2e2",
-                        "surface-container": "#eeeeee",
-                        "primary-fixed-dim": "#8bd2df",
-                        "tertiary-fixed": "#ffdbcf"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "max-width": "1440px",
-                        "unit": "8px",
-                        "gutter": "24px",
-                        "margin-mobile": "24px",
-                        "margin-desktop": "80px"
-                    },
-                    "fontFamily": {
-                        "label-caps": ["Hanken Grotesk"],
-                        "headline-lg-mobile": ["Bodoni Moda"],
-                        "body-md": ["Hanken Grotesk"],
-                        "display-xl": ["Bodoni Moda"],
-                        "headline-lg": ["Bodoni Moda"],
-                        "display-xl-mobile": ["Bodoni Moda"],
-                        "body-lg": ["Hanken Grotesk"]
-                    },
-                    "fontSize": {
-                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.2em", "fontWeight": "600" }],
-                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
-                        "body-md": ["16px", { "lineHeight": "28px", "letterSpacing": "0.03em", "fontWeight": "400" }],
-                        "display-xl": ["80px", { "lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
-                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "400" }],
-                        "display-xl-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
-                        "body-lg": ["18px", { "lineHeight": "32px", "letterSpacing": "0.05em", "fontWeight": "400" }]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        body { background-color: #f9f9f9; color: #1a1c1c; overflow-x: hidden; }
-        .grid-bg {
-            background-size: 24px 24px;
-            background-image:
-                linear-gradient(to right, rgba(217, 197, 178, 0.2) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(217, 197, 178, 0.2) 1px, transparent 1px);
-            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;
-        }
-        .reveal { opacity: 1; transform: none; transition: opacity .8s cubic-bezier(0.2, 0.8, 0.2, 1); }
-        .reveal.active { opacity: 1; transform: none; }
-    </style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--foam);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      text-rendering: optimizeLegibility;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(180deg, rgba(191, 233, 255, 0.45), rgba(247, 251, 255, 0.78) 34%, rgba(255, 255, 255, 0.96)),
+        repeating-linear-gradient(90deg, rgba(8, 111, 166, 0.045) 0 1px, transparent 1px 96px);
+    }
+
+    img,
+    svg {
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(247, 251, 255, 0.86);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      letter-spacing: 0;
+      color: var(--blue-deep);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border: 1px solid var(--blue);
+      border-radius: 6px;
+      background: var(--blue);
+      color: white;
+      font-weight: 750;
+      text-decoration: none;
+      white-space: nowrap;
+      box-shadow: 0 12px 28px rgba(8, 111, 166, 0.18);
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: var(--blue-deep);
+      border-color: var(--blue-deep);
+    }
+
+    .button.secondary {
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--blue-deep);
+      box-shadow: none;
+    }
+
+    .hero {
+      position: relative;
+      min-height: calc(100svh - 76px);
+      display: grid;
+      align-items: end;
+      padding: 78px 0 42px;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(247, 251, 255, 0.96) 0%, rgba(247, 251, 255, 0.82) 44%, rgba(247, 251, 255, 0.1) 100%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0) 64%, var(--foam) 100%),
+        url("https://images.unsplash.com/photo-1757540458718-39b554788b44?auto=format&fit=crop&w=1800&q=80") center right / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: -6vw;
+      right: -6vw;
+      bottom: -72px;
+      z-index: -1;
+      height: 160px;
+      background:
+        radial-gradient(120% 90% at 50% 0%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 58%),
+        linear-gradient(180deg, rgba(8, 111, 166, 0.08), rgba(246, 237, 223, 0.9));
+      transform: rotate(-1.6deg);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(280px, 0.56fr);
+      gap: 42px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      overflow-wrap: anywhere;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 8vw, 6.8rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+      color: var(--ink);
+    }
+
+    .lead {
+      max-width: 650px;
+      margin: 28px 0 0;
+      color: #254f68;
+      font-size: clamp(1.08rem, 2.2vw, 1.38rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .price-panel {
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.84);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 8px 0 10px;
+      color: var(--blue-deep);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.8rem, 6vw, 4.2rem);
+      line-height: 1;
+    }
+
+    .price span {
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 10px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .mini-list li {
+      display: flex;
+      gap: 10px;
+    }
+
+    .mini-list li::before {
+      content: "";
+      flex: 0 0 8px;
+      width: 8px;
+      height: 8px;
+      margin-top: 8px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    section {
+      padding: 88px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+      gap: 46px;
+      align-items: end;
+      margin-bottom: 42px;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.1rem, 5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .section-head p,
+    .section-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 680px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      min-width: 0;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.76);
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--blue-deep);
+      font-size: 1.04rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .offer {
+      background:
+        linear-gradient(135deg, rgba(223, 244, 255, 0.96), rgba(255, 255, 255, 0.94) 48%, rgba(246, 237, 223, 0.68)),
+        var(--white-stone);
+    }
+
+    .offer-box {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+      gap: 38px;
+      align-items: start;
+      padding: clamp(26px, 5vw, 48px);
+      border: 1px solid rgba(8, 111, 166, 0.18);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow);
+    }
+
+    .offer-box h2 {
+      margin-bottom: 16px;
+    }
+
+    .included {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .included li {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .included li:first-child {
+      padding-top: 0;
+    }
+
+    .included strong {
+      color: var(--ink);
+    }
+
+    .band {
+      background: linear-gradient(180deg, var(--blue-deep), #073a60);
+      color: white;
+    }
+
+    .band .eyebrow,
+    .band .section-head p,
+    .band .section-note {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .addons {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .addon {
+      min-width: 0;
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .addon strong {
+      display: block;
+      margin-bottom: 6px;
+      color: white;
+    }
+
+    .addon p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .steps {
+      counter-reset: step;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .step {
+      position: relative;
+      min-width: 0;
+      padding: 26px;
+      border-top: 2px solid var(--blue);
+      background: rgba(255, 255, 255, 0.62);
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: "0" counter(step);
+      display: block;
+      margin-bottom: 38px;
+      color: var(--blue);
+      font-weight: 850;
+    }
+
+    .step h3 {
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .contact {
+      background:
+        linear-gradient(180deg, rgba(247, 251, 255, 0.96), rgba(255, 255, 255, 0.92)),
+        linear-gradient(90deg, transparent 0 68%, rgba(8, 111, 166, 0.08) 68% 100%);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(300px, 1fr);
+      gap: 54px;
+      align-items: start;
+    }
+
+    .contact a {
+      color: var(--blue-deep);
+      font-weight: 750;
+    }
+
+    form {
+      display: grid;
+      gap: 16px;
+      padding: clamp(22px, 4vw, 36px);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      color: var(--ink);
+      font-size: 0.92rem;
+      font-weight: 750;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      min-width: 0;
+      border: 1px solid rgba(8, 40, 58, 0.2);
+      border-radius: 6px;
+      background: var(--foam);
+      color: var(--ink);
+      font: inherit;
+      padding: 13px 14px;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: 3px solid rgba(8, 111, 166, 0.18);
+      border-color: var(--blue);
+      background: white;
+    }
+
+    .site-footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      background: var(--white-stone);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 860px) {
+      .nav {
+        min-height: auto;
+        padding: 18px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .nav-links .button {
+        width: 100%;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 54px 0 34px;
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(180deg, rgba(247, 251, 255, 0.94) 0%, rgba(247, 251, 255, 0.86) 54%, rgba(247, 251, 255, 0.98) 100%),
+          url("https://images.unsplash.com/photo-1757540458718-39b554788b44?auto=format&fit=crop&w=1200&q=80") center / cover no-repeat;
+      }
+
+      .hero-grid,
+      .section-head,
+      .offer-box,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .steps,
+      .addons {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 66px 0;
+      }
+
+      .price-panel {
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .wrap {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .nav-links a:not(.button) {
+        font-size: 0.88rem;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .card,
+      .step,
+      .addon {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
-<body class="antialiased relative selection:bg-primary selection:text-on-primary">
-<!-- stitch-main-murus-mare-v1: generated with Google Stitch MCP, adapted for murusmare.com -->
-<div class="grid-bg"></div>
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-background dark:bg-surface border-b border-secondary-fixed-dim/20 transition-all duration-300" id="navbar">
-<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-24 max-w-max-width mx-auto">
-<a class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight" href="#">Murus Mare</a>
-<div class="hidden md:flex items-center space-x-12">
-<a class="font-label-caps text-label-caps text-on-surface-variant opacity-70 hover:text-tertiary transition-colors duration-500" href="#services">Services</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant opacity-70 hover:text-tertiary transition-colors duration-500" href="#packages">Packages</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant opacity-70 hover:text-tertiary transition-colors duration-500" href="#contact">Contact</a>
-</div>
-<a class="font-label-caps text-label-caps text-primary hover:text-tertiary transition-colors duration-500 hidden md:block" href="#contact">Inquire</a>
-<button class="md:hidden text-primary focus:outline-none">
-<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
-</button>
-</div>
-</nav>
-<main class="relative z-10 pt-32 md:pt-48 pb-32">
-<!-- Hero Section -->
-<section class="min-h-[819px] flex flex-col justify-center px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto relative reveal active">
-<div class="absolute right-0 top-0 w-1/2 h-full -z-10 opacity-30 mix-blend-multiply" style="background-image: radial-gradient(circle at 70% 30%, #8bd2df, transparent 60%);"></div>
-<div class="max-w-4xl">
-<p class="font-label-caps text-label-caps text-tertiary mb-8 tracking-widest uppercase">Website care for US small businesses</p>
-<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary leading-tight mb-12">
-                    International expertise for American small businesses.
-                </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-16">
-                    A calm monthly partner for the website things that keep slipping: support, hosting, domain, email, SEO content, and better lead flow.
-                </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mt-16 md:mt-32">
-<div class="md:col-start-8 md:col-span-5 h-96 bg-surface-container-low border border-secondary-fixed-dim/30 relative overflow-hidden group">
-<img alt="Abstract architectural photography showing minimalist limestone walls against a deep sea teal sky. The composition is highly geometric and clean, evoking the Murus Mare brand aesthetic of Mediterranean minimalism and calm structure." class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 ease-in-out mix-blend-luminosity" data-alt="Abstract architectural photography showing minimalist limestone walls against a deep sea teal sky. The composition is highly geometric and clean, evoking the Murus Mare brand aesthetic of Mediterranean minimalism and calm structure. High contrast, sharp lines, bright light mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpfEYjC2jj-fPkKqVcOQHVjROZQbigAk4SYfnZFPWR45K2n2giWoyBltiAutzlQ4pGkpDc0OySFIz6lbTjcPcxCM6zvVLimUJf-6e_AmTMLyQlqcCaLBGcsZXNqNbMdDNzHTP-QtX8JBWSWlQWsZEKKseCmHYxB9Zq1EAYPwTYpyI-dkHBlSaxTKsCkopDkzyZlHxM6jB86xvUJpHl4SyyHW6zehHjuj_RwMND-MO0j-5y5CZ5XIK27BZZ1fGXz1CwFQs4goGb7tZr"/>
-<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
-</div>
-</div>
-</section>
-<!-- Services Section -->
-<section class="py-32 md:py-48 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto border-t border-secondary-fixed-dim/20 reveal" id="services">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<div class="md:col-span-4 mb-16 md:mb-0">
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Services</h2>
-<p class="font-label-caps text-label-caps text-tertiary mb-8">Less tech headache. More steady growth.</p>
-</div>
-<div class="md:col-start-6 md:col-span-7 space-y-24">
-<div class="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-tertiary">
-<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Websites</h3>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-                            Clean, credible websites that make a local company look established, trustworthy, and easy to contact — without the bloated agency process.
-                        </p>
-</div>
-<div class="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-secondary-fixed-dim">
-<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Lead Flows &amp; Automation</h3>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-                            Forms, landing pages, ads, follow-up flows, and simple automations that turn interest into calls, quote requests, and booked work.
-                        </p>
-</div>
-<div class="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-secondary-fixed-dim">
-<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Monthly Digital Support</h3>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-                            Monthly care for hosting, domain/email support, content updates, SEO articles, analytics, fixes, and practical improvements.
-                        </p>
-</div>
-</div>
-</div>
-</section>
-<!-- Packages Section -->
-<section class="py-32 md:py-48 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto border-t border-secondary-fixed-dim/20 reveal" id="packages">
-<div class="mb-24 md:w-1/2">
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Packages</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">Start with dependable monthly support. Add growth when ready.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-x-gutter gap-y-16">
-<!-- Starter -->
-<div class="border-t border-secondary-fixed-dim/50 pt-8 flex flex-col h-full hover:border-primary transition-colors duration-500">
-<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase">Care</h3>
-<div class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg text-primary mb-8">
-                        $149 <span class="font-body-md text-body-md align-top ml-1">/mo</span>
-</div>
-<ul class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-12 flex-grow">
-<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Website support &amp; maintenance</li>
-<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Hosting, domain &amp; email help</li>
-<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> One monthly SEO content piece</li>
-</ul>
-</div>
-<!-- Growth -->
-<div class="border-t border-primary pt-8 flex flex-col h-full bg-surface-container-low -mx-margin-mobile px-margin-mobile md:mx-0 md:px-6 relative">
-<div class="absolute top-0 right-margin-mobile md:right-6 bg-primary text-on-primary font-label-caps text-[10px] px-3 py-1 -translate-y-1/2 rounded-none tracking-widest">Recommended</div>
-<h3 class="font-label-caps text-label-caps text-primary mb-2 uppercase">Growth</h3>
-<div class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg text-primary mb-8">
-                        Custom <span class="font-body-md text-body-md align-top ml-1">monthly</span>
-</div>
-<ul class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-12 flex-grow">
-<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Landing pages and local SEO expansion</li>
-<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Ads and lead generation support</li>
-<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Tracking, forms, automations, and follow-up</li>
-<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Monthly reporting and priority improvements</li>
-</ul>
-</div>
-<!-- Support -->
-<div class="border-t border-secondary-fixed-dim/50 pt-8 flex flex-col h-full hover:border-primary transition-colors duration-500">
-<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase">Build</h3>
-<div class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg text-primary mb-8">
-                        Project <span class="font-body-md text-body-md align-top ml-1">quote</span>
-</div>
-<ul class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-12 flex-grow">
-<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> New website or redesign</li>
-<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Conversion-focused service pages</li>
-<li class="flex items-start"><span class="text-tertiary mr-2 opacity-50">—</span> Optional AI/automation integrations</li>
-</ul>
-</div>
-</div>
-</section>
-<!-- Contact Section -->
-<section class="py-32 md:py-48 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto border-t border-secondary-fixed-dim/20 reveal" id="contact">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<div class="md:col-span-5 mb-16 md:mb-0">
-<h2 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary mb-6">Send a signal.</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-sm">
-                        Tell us what is broken, outdated, or ignored. We will suggest a simple next step. 
-                    </p>
-<a class="inline-block mt-8 font-label-caps text-label-caps text-tertiary border-b border-tertiary pb-1 hover:text-primary hover:border-primary transition-colors duration-300" href="mailto:hello@murusmare.com">hello@murusmare.com</a>
-</div>
-<div class="md:col-start-7 md:col-span-6 bg-surface p-8 md:p-12 border border-secondary-fixed-dim/30 relative">
-<div class="absolute inset-0 bg-primary-fixed-dim/5 mix-blend-overlay pointer-events-none"></div>
-<form class="space-y-12 relative z-10" action="https://formsubmit.co/hello@murusmare.com" method="POST">
-<input type="hidden" name="_subject" value="Project with Murus Mare"/>
-<input type="hidden" name="_captcha" value="false"/>
-<input type="hidden" name="_template" value="box"/>
-<div class="relative group">
-<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 transition-colors group-focus-within:text-primary">Name</label>
-<input class="w-full bg-transparent border-0 border-b border-secondary-fixed-dim/50 focus:ring-0 focus:border-primary py-2 px-0 font-body-md text-body-md text-on-surface transition-colors" name="name" autocomplete="name" placeholder="Your full name" required type="text"/>
-</div>
-<div class="relative group">
-<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 transition-colors group-focus-within:text-primary">Email</label>
-<input class="w-full bg-transparent border-0 border-b border-secondary-fixed-dim/50 focus:ring-0 focus:border-primary py-2 px-0 font-body-md text-body-md text-on-surface transition-colors" name="email" autocomplete="email" placeholder="address@domain.com" required type="email"/>
-</div>
-<div class="relative group">
-<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 transition-colors group-focus-within:text-primary">Inquiry</label>
-<textarea class="w-full bg-transparent border-0 border-b border-secondary-fixed-dim/50 focus:ring-0 focus:border-primary py-2 px-0 font-body-md text-body-md text-on-surface transition-colors resize-none" name="message" placeholder="How can we assist you?" required rows="3"></textarea>
-</div>
-<button class="bg-primary text-on-primary font-label-caps text-label-caps py-4 px-12 uppercase tracking-widest hover:bg-tertiary transition-colors duration-500 w-full md:w-auto mt-4 rounded-none" type="submit">
-                            Send to hello@murusmare.com
-                        </button>
-</form>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full py-40 bg-surface-container dark:bg-surface-container-high border-t border-secondary-fixed-dim/20">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
-<div class="md:col-span-4 mb-16 md:mb-0">
-<a class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary dark:text-primary-fixed block mb-6" href="#">Murus Mare</a>
-<p class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant opacity-70">
-                    © <span id="year"></span> Murus Mare. Crafted with intention.
-                </p>
-</div>
-<div class="md:col-start-7 md:col-span-6 flex flex-col md:flex-row md:justify-end space-y-6 md:space-y-0 md:space-x-16">
-<div class="flex flex-col space-y-4">
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline hover:text-tertiary dark:hover:text-tertiary-fixed-dim transition-opacity duration-300" href="mailto:hello@murusmare.com">hello@murusmare.com</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline hover:text-tertiary dark:hover:text-tertiary-fixed-dim transition-opacity duration-300" href="#services">Services</a>
-</div>
-<div class="flex flex-col space-y-4">
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline hover:text-tertiary dark:hover:text-tertiary-fixed-dim transition-opacity duration-300" href="#packages">Packages</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline hover:text-tertiary dark:hover:text-tertiary-fixed-dim transition-opacity duration-300" href="#contact">Contact</a>
-</div>
-</div>
-</div>
-</footer>
-<script>
-        // Scroll Reveal Logic
-        document.addEventListener("DOMContentLoaded", () => {
-            const reveals = document.querySelectorAll(".reveal");
-            const revealOnScroll = () => {
-                const windowHeight = window.innerHeight;
-                reveals.forEach((reveal) => {
-                    const revealTop = reveal.getBoundingClientRect().top;
-                    const revealPoint = 150;
-                    if (revealTop < windowHeight - revealPoint) {
-                        reveal.classList.add("active");
-                    }
-                });
-            };
-            window.addEventListener("scroll", revealOnScroll);
-            revealOnScroll(); // Trigger on load
+<body>
+  <header class="site-header">
+    <nav class="wrap nav" aria-label="Main navigation">
+      <a class="brand" href="#">Murus Mare</a>
+      <div class="nav-links">
+        <a href="#care">Website Care</a>
+        <a href="#growth">Growth Add-ons</a>
+        <a href="#process">Process</a>
+        <a class="button" href="#contact">Get Help</a>
+      </div>
+    </nav>
+  </header>
 
-            // Navbar slight shrink on scroll
-            const navbar = document.getElementById("navbar");
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add("py-2");
-                    navbar.classList.remove("py-0");
-                    navbar.style.background = "rgba(249, 249, 249, 0.95)";
-                    navbar.style.backdropFilter = "blur(10px)";
-                } else {
-                    navbar.classList.remove("py-2");
-                    navbar.classList.add("py-0");
-                    navbar.style.background = "#f9f9f9";
-                    navbar.style.backdropFilter = "none";
-                }
-            });
-        });
-    document.getElementById("year").textContent = new Date().getFullYear();
-        </script>
-</body></html>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Website care for US small businesses</p>
+          <h1>A clearer website, maintained every month.</h1>
+          <p class="lead">Murus Mare keeps your small business website updated, supported, and easier to find, starting at $149/month.</p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Ask about website care</a>
+            <a class="button secondary" href="mailto:hello@murusmare.com">Email hello@murusmare.com</a>
+          </div>
+        </div>
+        <aside class="price-panel" aria-label="$149 monthly website care plan">
+          <p class="eyebrow">Core offer</p>
+          <div class="price">$149 <span>/ month</span></div>
+          <p>Website support and maintenance for owners who need a reliable technical partner, not another unfinished project.</p>
+          <ul class="mini-list">
+            <li>Small fixes and updates</li>
+            <li>Hosting, domain, and email help</li>
+            <li>One monthly SEO content piece</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Built for practical growth</p>
+            <h2>Your site should help people choose you.</h2>
+          </div>
+          <p>Most small business websites do not need a bloated rebuild. They need clear service pages, working forms, accurate contact details, regular updates, and a path for turning visitors into calls or requests.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <strong>For service businesses</strong>
+            <p>Contractors, clinics, consultants, local providers, shops, and professional firms that rely on trust and local demand.</p>
+          </article>
+          <article class="card">
+            <strong>For busy owners</strong>
+            <p>Send the issue or update. We handle the website work and explain the next step in plain business language.</p>
+          </article>
+          <article class="card">
+            <strong>For steady improvement</strong>
+            <p>Care covers maintenance first, then adds content, SEO, landing pages, tracking, and lead systems as needed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer" id="care">
+      <div class="wrap offer-box">
+        <div>
+          <p class="eyebrow">Website care plan</p>
+          <h2>$149/month for the website work that keeps getting delayed.</h2>
+          <p class="section-note">A simple monthly plan for US small businesses that want the website handled without hiring in-house or waiting on one-off freelancers.</p>
+        </div>
+        <ul class="included">
+          <li><strong>Website support and maintenance.</strong> Help with updates, broken links, forms, page edits, plugin or platform issues, and routine improvements.</li>
+          <li><strong>Hosting help.</strong> Guidance with hosting accounts, DNS records, SSL, backups, migrations, and basic performance concerns.</li>
+          <li><strong>Domain and email help.</strong> Support with domain settings, business email setup, forwarding, authentication records, and related account issues.</li>
+          <li><strong>One monthly SEO content piece.</strong> A practical article, service page update, or location-focused content piece aimed at the searches your customers make.</li>
+          <li><strong>Small fixes.</strong> Minor copy, layout, image, form, and technical fixes that keep the site accurate and usable.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band" id="growth">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Growth add-ons</p>
+            <h2>Add the services that create demand.</h2>
+          </div>
+          <p>Start with care. Add focused growth work when the foundation is stable and there is a clear business reason to invest.</p>
+        </div>
+        <div class="addons">
+          <article class="addon">
+            <strong>Local SEO and Google Business Profile</strong>
+            <p>Improve local search visibility, service categories, location signals, and the information customers see before they click.</p>
+          </article>
+          <article class="addon">
+            <strong>Ads and lead generation</strong>
+            <p>Campaign setup, landing-page alignment, tracking, and practical improvements focused on qualified inquiries.</p>
+          </article>
+          <article class="addon">
+            <strong>Landing pages</strong>
+            <p>Dedicated pages for services, offers, locations, seasonal campaigns, or paid traffic.</p>
+          </article>
+          <article class="addon">
+            <strong>Automations and analytics</strong>
+            <p>Lead routing, simple follow-up flows, conversion tracking, reporting dashboards, and measurement cleanup.</p>
+          </article>
+          <article class="addon">
+            <strong>Custom builds</strong>
+            <p>New websites, redesigns, custom integrations, and operational tools scoped around business outcomes.</p>
+          </article>
+          <article class="addon">
+            <strong>Content expansion</strong>
+            <p>Additional SEO articles, service pages, local pages, offer pages, and copy improvements beyond the care plan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">How it works</p>
+            <h2>Clear scope. Clear next steps.</h2>
+          </div>
+          <p>No vague retainers. We confirm the immediate website needs, start with the monthly care plan, and recommend growth work only when it fits your goals.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <h3>Send the website and the problem</h3>
+            <p>Tell us what is broken, outdated, missing, or underperforming.</p>
+          </article>
+          <article class="step">
+            <h3>Get a practical recommendation</h3>
+            <p>We identify what belongs in monthly care and what should be scoped as a separate growth add-on.</p>
+          </article>
+          <article class="step">
+            <h3>Keep improving every month</h3>
+            <p>Maintenance, fixes, and SEO content continue while bigger improvements are planned around business priorities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Tell us what your website needs.</h2>
+          <p class="section-note">Use the form or email <a href="mailto:hello@murusmare.com">hello@murusmare.com</a>. Include your website URL, what you want fixed, and whether you are asking about care, growth add-ons, or a custom build.</p>
+        </div>
+        <form action="https://formsubmit.co/hello@murusmare.com" method="POST">
+          <input type="hidden" name="_subject" value="New Murus Mare website inquiry">
+          <input type="hidden" name="_captcha" value="false">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            Message
+            <textarea name="message" required placeholder="Share your website URL and what you need help with."></textarea>
+          </label>
+          <button class="button" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>Murus Mare</span>
+      <span>Website care for US small businesses | <a href="mailto:hello@murusmare.com">hello@murusmare.com</a></span>
+    </div>
+  </footer>
+</body>
+</html>
